@@ -98,39 +98,39 @@ void choose_color(SDL_Instance instance, char **map, int_s coord, int hit_side)
 	switch (map[coord.x][coord.y])
 	{
 		case '1':
-			/* Muted Purple walls */
+			/* Deep Blue Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x93, 0x70, 0xDB, 0xFF); // Soft lavender
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x34, 0x66, 0xFF); // Dark blue
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x6A, 0x48, 0xA8, 0xFF); // Muted shadow lavender
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x28, 0x4D, 0xFF); // Navy shadow
 			break;
 		case '2':
-			/* Teal Walls */
+			/* Dark Green Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x20, 0xB2, 0xAA, 0xFF); // Light teal
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x5F, 0x37, 0xFF); // Dark forest green
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x17, 0x86, 0x7D, 0xFF); // Darker teal
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x47, 0x2B, 0xFF); // Shadow green
 			break;
 		case '3':
-			/* Soft Pink Walls */
+			/* Charcoal Gray Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xB6, 0xC1, 0xFF); // Light pink
+				SDL_SetRenderDrawColor(instance.renderer, 0x36, 0x36, 0x36, 0xFF); // Charcoal
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0xC7, 0x89, 0x8D, 0xFF); // Muted rose
+				SDL_SetRenderDrawColor(instance.renderer, 0x2C, 0x2C, 0x2C, 0xFF); // Darker gray
 			break;
 		case '4':
-			/* Pastel Orange Walls */
+			/* Burnt Orange Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xA0, 0x7A, 0xFF); // Peach
+				SDL_SetRenderDrawColor(instance.renderer, 0xD9, 0x6B, 0x00, 0xFF); // Burnt orange
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0xCC, 0x7A, 0x5C, 0xFF); // Darker peach
+				SDL_SetRenderDrawColor(instance.renderer, 0xA3, 0x52, 0x00, 0xFF); // Dark burnt orange
 			break;
 		default:
-			/* Soft Gray Walls */
+			/* Dark Steel Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xE0, 0xE0, 0xE0, 0xFF); // Light gray
+				SDL_SetRenderDrawColor(instance.renderer, 0x4B, 0x4B, 0x4B, 0xFF); // Steel gray
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0xB0, 0xB0, 0xB0, 0xFF); // Medium gray
+				SDL_SetRenderDrawColor(instance.renderer, 0x3A, 0x3A, 0x3A, 0xFF); // Shadow gray
 			break;
 	}
 }
