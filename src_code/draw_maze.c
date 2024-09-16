@@ -98,39 +98,39 @@ void choose_color(SDL_Instance instance, char **map, int_s coord, int hit_side)
 	switch (map[coord.x][coord.y])
 	{
 		case '1':
-			/* Red walls */
+			/* Darker Red walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xE6, 0x3C, 0x3C, 0xFF); // Warmer red
+				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x00, 0x00, 0xFF); // Dark red
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x22, 0x22, 0xFF); // Darker red
+				SDL_SetRenderDrawColor(instance.renderer, 0x55, 0x00, 0x00, 0xFF); // Darker shadow red
 			break;
 		case '2':
-			/* Green Walls */
+			/* Darker Green Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x32, 0xCD, 0x32, 0xFF); // Lime green
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x64, 0x00, 0xFF); // Dark green
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x22, 0x8B, 0x22, 0xFF); // Forest green
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x32, 0x00, 0xFF); // Darker shadow green
 			break;
 		case '3':
-			/* Blue Walls */
+			/* Darker Blue Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x1E, 0x90, 0xFF, 0xFF); // Dodger blue
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x00, 0x8B, 0xFF); // Dark blue
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x1C, 0x86, 0xC8, 0xFF); // Cyan blue
+				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x00, 0x55, 0xFF); // Darker shadow blue
 			break;
 		case '4':
-			/* Yellow Walls */
+			/* Darker Yellow Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xD7, 0x00, 0xFF); // Gold
+				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x8B, 0x00, 0xFF); // Dark gold
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0xC8, 0xB8, 0x00, 0xFF); // Muted yellow
+				SDL_SetRenderDrawColor(instance.renderer, 0x55, 0x55, 0x00, 0xFF); // Darker shadow yellow
 			break;
 		default:
-			/* Gray Walls */
+			/* Darker Gray Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xD3, 0xD3, 0xD3, 0xFF); // Light gray
+				SDL_SetRenderDrawColor(instance.renderer, 0x69, 0x69, 0x69, 0xFF); // Dark gray
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0xA9, 0xA9, 0xA9, 0xFF); // Dark gray
+				SDL_SetRenderDrawColor(instance.renderer, 0x40, 0x40, 0x40, 0xFF); // Darker shadow gray
 			break;
 	}
 }
