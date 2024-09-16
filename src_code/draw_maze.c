@@ -95,42 +95,42 @@ void draw_walls(char **map, double_s play, SDL_Instance instance, double_s dir,
  **/
 void choose_color(SDL_Instance instance, char **map, int_s coord, int hit_side)
 {
-		switch (map[coord.x][coord.y])
-		{
+	switch (map[coord.x][coord.y])
+	{
 		case '1':
 			/* Red walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0xE6, 0x3C, 0x3C, 0xFF); // Warmer red
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x88, 0, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x22, 0x22, 0xFF); // Darker red
 			break;
 		case '2':
 			/* Green Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0, 0xFF, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0x32, 0xCD, 0x32, 0xFF); // Lime green
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0, 0x88, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0x22, 0x8B, 0x22, 0xFF); // Forest green
 			break;
 		case '3':
 			/* Blue Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0, 0, 0xFF, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0x1E, 0x90, 0xFF, 0xFF); // Dodger blue
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0, 0, 0x88, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0x1C, 0x86, 0xC8, 0xFF); // Cyan blue
 			break;
 		case '4':
 			/* Yellow Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xFF, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xD7, 0x00, 0xFF); // Gold
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x88, 0x88, 0, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0xC8, 0xB8, 0x00, 0xFF); // Muted yellow
 			break;
 		default:
-			/* White Walls */
+			/* Gray Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0xD3, 0xD3, 0xD3, 0xFF); // Light gray
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x88, 0x88, 0x88, 0xFF);
+				SDL_SetRenderDrawColor(instance.renderer, 0xA9, 0xA9, 0xA9, 0xFF); // Dark gray
 			break;
-		}
+	}
 }
