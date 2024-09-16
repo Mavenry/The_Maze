@@ -98,39 +98,39 @@ void choose_color(SDL_Instance instance, char **map, int_s coord, int hit_side)
 	switch (map[coord.x][coord.y])
 	{
 		case '1':
-			/* Darker Red walls */
+			/* Muted Purple walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x00, 0x00, 0xFF); // Dark red
+				SDL_SetRenderDrawColor(instance.renderer, 0x93, 0x70, 0xDB, 0xFF); // Soft lavender
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x55, 0x00, 0x00, 0xFF); // Darker shadow red
+				SDL_SetRenderDrawColor(instance.renderer, 0x6A, 0x48, 0xA8, 0xFF); // Muted shadow lavender
 			break;
 		case '2':
-			/* Darker Green Walls */
+			/* Teal Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x64, 0x00, 0xFF); // Dark green
+				SDL_SetRenderDrawColor(instance.renderer, 0x20, 0xB2, 0xAA, 0xFF); // Light teal
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x32, 0x00, 0xFF); // Darker shadow green
+				SDL_SetRenderDrawColor(instance.renderer, 0x17, 0x86, 0x7D, 0xFF); // Darker teal
 			break;
 		case '3':
-			/* Darker Blue Walls */
+			/* Soft Pink Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x00, 0x8B, 0xFF); // Dark blue
+				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xB6, 0xC1, 0xFF); // Light pink
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x00, 0x00, 0x55, 0xFF); // Darker shadow blue
+				SDL_SetRenderDrawColor(instance.renderer, 0xC7, 0x89, 0x8D, 0xFF); // Muted rose
 			break;
 		case '4':
-			/* Darker Yellow Walls */
+			/* Pastel Orange Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x8B, 0x8B, 0x00, 0xFF); // Dark gold
+				SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0xA0, 0x7A, 0xFF); // Peach
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x55, 0x55, 0x00, 0xFF); // Darker shadow yellow
+				SDL_SetRenderDrawColor(instance.renderer, 0xCC, 0x7A, 0x5C, 0xFF); // Darker peach
 			break;
 		default:
-			/* Darker Gray Walls */
+			/* Soft Gray Walls */
 			if (hit_side == 0)
-				SDL_SetRenderDrawColor(instance.renderer, 0x69, 0x69, 0x69, 0xFF); // Dark gray
+				SDL_SetRenderDrawColor(instance.renderer, 0xE0, 0xE0, 0xE0, 0xFF); // Light gray
 			else
-				SDL_SetRenderDrawColor(instance.renderer, 0x40, 0x40, 0x40, 0xFF); // Darker shadow gray
+				SDL_SetRenderDrawColor(instance.renderer, 0xB0, 0xB0, 0xB0, 0xFF); // Medium gray
 			break;
 	}
 }
