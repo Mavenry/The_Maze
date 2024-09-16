@@ -30,17 +30,18 @@ void draw_background(SDL_Instance instance)
 {
 	size_t x;
 
-
 	for (x = 0; x <= SCREEN_WIDTH; x++)
 	{
-		SDL_SetRenderDrawColor(instance.renderer, 0, 0xDD, 0xFF, 0xFF);
+		/* Night sky color */
+		SDL_SetRenderDrawColor(instance.renderer, 10, 10, 50, 0xFF);  // Dark blue (night sky)
 		SDL_RenderDrawLine(instance.renderer, x, 0, x, SCREEN_HEIGHT / 2);
-		SDL_SetRenderDrawColor(instance.renderer, 0xFF, 0, 0xFF, 0xFF);
-		SDL_RenderDrawLine(instance.renderer, x, SCREEN_HEIGHT / 2, x,
-				   SCREEN_HEIGHT);
+		
+		/* Dark green color */
+		SDL_SetRenderDrawColor(instance.renderer, 0, 100, 0, 0xFF);   // Dark green (forest green)
+		SDL_RenderDrawLine(instance.renderer, x, SCREEN_HEIGHT / 2, x, SCREEN_HEIGHT);
 	}
-
 }
+
 
 /**
  * draw_walls - Use Raycasting to draw the walls of the maze
