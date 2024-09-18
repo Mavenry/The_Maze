@@ -35,9 +35,9 @@ void draw_background(SDL_Instance instance)
 		/* Dawn sky color */
 		SDL_SetRenderDrawColor(instance.renderer, 255, 178, 102, 0xFF);  // Soft orange (dawn sky)
 		SDL_RenderDrawLine(instance.renderer, x, 0, x, SCREEN_HEIGHT / 2);
-		
-		/* Very dark brown color */
-		SDL_SetRenderDrawColor(instance.renderer, 45, 30, 10, 0xFF);   // Very dark brown
+
+		/* Lighter brown color */
+		SDL_SetRenderDrawColor(instance.renderer, 89, 60, 30, 0xFF);   // Lighter brown
 		SDL_RenderDrawLine(instance.renderer, x, SCREEN_HEIGHT / 2, x, SCREEN_HEIGHT);
 	}
 }
