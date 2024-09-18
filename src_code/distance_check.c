@@ -74,4 +74,26 @@ double get_wall_dist(char **map, double_s *dist_side, int_s *coord,
 		{
 			dist_side->x += dist_del->x;  /* Increment distance to next x grid boundary */
 			coord->x += step->x;  /* Move in the x direction */
+			*hit_side = 0;  /* Hit a N/S wall */
+		}
+		else
+		{
+			dist_side->y += dist_del->y;  /* Increment distance to next y grid boundary */
+			coord->y += step->y;  /* Move in the y direction */
+			*hit_side = 1;  /* Hit an E/W wall */
+		}
+
+		/* Check if the ray has hit a wall (non-zero character in the map) */
+		if (map[coord->x][coord->y] > '0')
+			hit_wall = 1;
+	}
+
+	/* Calculate the actual distance from the player to the wall */
+	if (*hit_side == 0)
+		wall_dist = (coord->x - ray_pos->x + (1 - step->x) / 2) / ray_dir->x;  /* Wall hit on N/S */
+	else
+		wall_dist = (coord->y - ray_pos->y + (1 - step->y) / 2) / ray_dir->y;  /* Wall hit on E/W */
+	
+	return (wall_dist);
+}
 
