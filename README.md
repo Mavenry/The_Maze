@@ -69,3 +69,6 @@ Get creative by adding advanced options such as shadows, special lighting effect
 
 <img width="349" alt="flowchart" src="https://github.com/user-attachments/assets/6956f281-b1e8-4f0a-bc85-e4ab3b0d6596">
 
+
+This Project work is still in process as some features like texture, enemies among others have not been added.
+Expect future updates.
