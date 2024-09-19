@@ -66,3 +66,6 @@ Add a rain effect and provide a key to toggle it on and off.
 
 15. Extra Features  
 Get creative by adding advanced options such as shadows, special lighting effects, etc.
+
+<img width="349" alt="flowchart" src="https://github.com/user-attachments/assets/6956f281-b1e8-4f0a-bc85-e4ab3b0d6596">
+
