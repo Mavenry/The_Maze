@@ -11,8 +11,8 @@ void print_win(void)
 	printf("\n\n\n\n\n\n\n\n\n\n");
 	printf("     \\ //   __    ||   ||\n");
 	printf("      \\/  //  \\  ||   ||\n");
-	printf("      //  ||    || ||   ||\n");
-	printf("     //    \\__//   \\_//\n\n");
+	printf("      //  ||   ||  ||   ||\n");
+	printf("     //    \\__//   \\__//\n\n");
 	printf("\\      //\\      //   ||     ||\\   ||\n");
 	printf(" \\    //  \\    //    ||     || \\  ||\n");
 	printf("  \\  //    \\  //     ||     ||  \\ ||\n");
